@@ -22,6 +22,7 @@ public class Yelp {
   Token accessToken;
 
   public static Yelp getYelp(Context context) {
+	  // create Yelp object with developer key and token from yelp
 	  return new Yelp(context.getString(R.string.consumer_key), context.getString(R.string.consumer_secret),
 			  context.getString(R.string.token), context.getString(R.string.token_secret));
   }
@@ -58,8 +59,8 @@ public class Yelp {
     request.addQuerystringParameter("offset", String.valueOf(offset));
     this.service.signRequest(this.accessToken, request);
     String s = request.getCompleteUrl();
-    Response response = request.send();
-    return response.getBody();
+    Response response = request.send();	// send request
+    return response.getBody();	// get result
   }
 
   public String search(String term, double latitude, double longitude) {
