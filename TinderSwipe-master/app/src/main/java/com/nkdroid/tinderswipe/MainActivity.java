@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     private ArrayList<Data> al = new ArrayList<Data>();
     private SwipeFlingAdapterView flingContainer;
 
-    String term = "restaurant";
-    double latitude = 33.80573;
-    double longitude = -117.94514;
-    int radius = 3000;
-    int limitSearch = 40;
-    int offset = 0;
+    String term = "restaurant";     // term to search
+    double latitude = 33.80573;     // current position
+    double longitude = -117.94514;  // current position
+    int radius = 3000;              // radius to search
+    int limitSearch = 40;           // limit the result return
+    int offset = 0;                 // offset of json object return in array
 
     public static void removeBackground() {
 
@@ -55,45 +55,50 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
+        // send asynchonous request to Yelp server
         new AsyncTask<Void, Void, String>() {
             @Override
             protected String doInBackground(Void... params) {
-                Yelp yelp = Yelp.getYelp(MainActivity.this);
-                String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset);
+                Yelp yelp = Yelp.getYelp(MainActivity.this);    // create yelp object
+                
+                // Yelp return a Json String
+                String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
 
                 try {
-                    JSONObject json = new JSONObject(businessesList);
-                    JSONArray businesses = json.getJSONArray("businesses");
+                    JSONObject json = new JSONObject(businessesList);           // parse string to json
+                    JSONArray businesses = json.getJSONArray("businesses");     // get all restaurants based on key "businesses", return a jsonarray
 
+                    // loop through every single json object in array
                     for(int i = 0; i< businesses.length();i++){
-                        JSONObject restaurant = (JSONObject) businesses.get(i);
-                        String restaurantID = restaurant.get("id").toString();
-                        String restaurantName = restaurant.get("name").toString();
+                        
+                        JSONObject restaurant = (JSONObject) businesses.get(i); // get json object in jsonarray based on index
+                        String restaurantID = restaurant.get("id").toString();  // get restaurant id based on the key "id"
+                        String restaurantName = restaurant.get("name").toString(); // get restaurant id based on the key "name"
 
-                        String restaurantCatergories = null;
-                        JSONArray catergoriesJsonObject = (JSONArray)restaurant.get("categories");
+                        String restaurantCatergories = null;    
+                        JSONArray catergoriesJsonObject = (JSONArray)restaurant.get("categories");  // take jsonarray of catergories
                         List subList = new ArrayList();
                         for(int j =0;j<catergoriesJsonObject.length();j++){
-                            JSONArray obj = (JSONArray)catergoriesJsonObject.get(j);
-                            subList.add(obj.get(0).toString());
+                            JSONArray obj = (JSONArray)catergoriesJsonObject.get(j); // get every single element in json array
+                            subList.add(obj.get(0).toString()); // get first element of a json catergory, put it into list
                         }
-                        restaurantCatergories = TextUtils.join(", ", subList);
+                        restaurantCatergories = TextUtils.join(", ", subList); // change the list to string form
 
                         String restaurantImage_url = "";
-                        if(restaurant.has("image_url")){
+                        if(restaurant.has("image_url")){  // get image url
                             restaurantImage_url = restaurant.get("image_url").toString();
-                            restaurantImage_url = restaurantImage_url.substring(0, restaurantImage_url.length()-6) + "l.jpg";
+                            restaurantImage_url = restaurantImage_url.substring(0, restaurantImage_url.length()-6) + "l.jpg"; // change the name of image to get large image
                         }
                         else
                             restaurantImage_url = " ";
 
-                        String restaurantRating = restaurant.get("rating").toString();
-                        String restaurantPhone = restaurant.get("phone").toString();
-                        restaurantPhone = restaurantPhone.substring(0,3) + "-" + restaurantPhone.substring(3,6) + "-" + restaurantPhone.substring(6, restaurantPhone.length());
+                        String restaurantRating = restaurant.get("rating").toString();  // get rating
+                        String restaurantPhone = restaurant.get("phone").toString();    // get phone
+                        restaurantPhone = restaurantPhone.substring(0,3) + "-" + restaurantPhone.substring(3,6) + "-" + restaurantPhone.substring(6, restaurantPhone.length()); // format the phone
 
-                        JSONObject location = (JSONObject) restaurant.get("location");
-                        JSONArray addressList =  location.getJSONArray("display_address");
-                        String restaurantAddress = addressList.get(0) + ", " + addressList.get(1);
+                        JSONObject location = (JSONObject) restaurant.get("location"); // get location
+                        JSONArray addressList =  location.getJSONArray("display_address"); // get display address in location
+                        String restaurantAddress = addressList.get(0) + ", " + addressList.get(1); // 
 
                         JSONObject coordinate = (JSONObject) location.get("coordinate");
                         String restaurantLatitude = coordinate.get("latitude").toString();
