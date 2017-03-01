@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TinderSwipe</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="consumer_key">lMZmKGBwGTl0TeZr97ELvg</string>
+    <string name="consumer_secret">J4AK51rn7HqquiGDV7JagvSTQYo</string>
+    <string name="token">0nljNRpseCvcpRQq4MIEOy-qJr3juM1U</string>
+    <string name="token_secret">_It-e_U0Tx6w_0JjTChKB2q3fqA</string>
+</resources>
