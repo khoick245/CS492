@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
     public static MyAppAdapter myAppAdapter;
     public static ViewHolder viewHolder;
-    private ArrayList<Data> al = new ArrayList<Data>();
+    private ArrayList<Data> al = new ArrayList<Data>(); // hold restaurant from yelp
     private SwipeFlingAdapterView flingContainer;
 
     String term = "restaurant";     // term to search
@@ -98,12 +98,13 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                         JSONObject location = (JSONObject) restaurant.get("location"); // get location
                         JSONArray addressList =  location.getJSONArray("display_address"); // get display address in location
-                        String restaurantAddress = addressList.get(0) + ", " + addressList.get(1); // 
+                        String restaurantAddress = addressList.get(0) + ", " + addressList.get(1); // get display address as string
 
-                        JSONObject coordinate = (JSONObject) location.get("coordinate");
+                        JSONObject coordinate = (JSONObject) location.get("coordinate");    // get position
                         String restaurantLatitude = coordinate.get("latitude").toString();
                         String restaurantLongitude = coordinate.get("longitude").toString();
 
+                        // add new data restaurant object to array list
                         al.add(new Data(restaurantID,restaurantName, restaurantCatergories, restaurantImage_url,restaurantRating,restaurantPhone,restaurantAddress,restaurantLatitude,restaurantLongitude));
                     }
                 }
@@ -119,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
             }
         }.execute();
 
-        while(al.isEmpty()){}
+        while(al.isEmpty()){}   // while until get a result from yelp
 
         myAppAdapter = new MyAppAdapter(al, MainActivity.this);
         flingContainer.setAdapter(myAppAdapter);
@@ -236,8 +237,9 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 viewHolder = (ViewHolder) convertView.getTag();
             }
 
-            Data currentRestaurantOnScreen = parkingList.get(position);
+            Data currentRestaurantOnScreen = parkingList.get(position); // get current element in arraylist
 
+            // create display string
             String display = "Name: " + currentRestaurantOnScreen.getName() + "\n" +
                                 "Category: " + currentRestaurantOnScreen.getCategories() + "\n" +
                                 "Rating: " + currentRestaurantOnScreen.getRating() + "/5"+ "\n" +
@@ -246,6 +248,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
             viewHolder.DataText.setText(display);
 
+            // display image
             Glide.with(MainActivity.this).load(parkingList.get(position).getImage_url()).into(viewHolder.cardImage);
 
             return rowView;
