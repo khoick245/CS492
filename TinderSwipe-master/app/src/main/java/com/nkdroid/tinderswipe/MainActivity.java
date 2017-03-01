@@ -36,9 +36,11 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     String term = "restaurant";     // term to search
     double latitude = 33.80573;     // current position
     double longitude = -117.94514;  // current position
-    int radius = 3000;              // radius to search
-    int limitSearch = 40;           // limit the result return
+    int radius = 650;              // radius to search
+    int limitSearch = 5;           // limit the result return
     int offset = 0;                 // offset of json object return in array
+    int countGroupOffset = 1;       // used to group offset base on limitSearch
+    long totalResultFromYelp = 0;    // how many restaurant yelp find out every time of searching
 
     public static void removeBackground() {
 
@@ -55,18 +57,23 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
+        String s1="";
+        String s2="";
+
         // send asynchonous request to Yelp server
         new AsyncTask<Void, Void, String>() {
             @Override
             protected String doInBackground(Void... params) {
                 Yelp yelp = Yelp.getYelp(MainActivity.this);    // create yelp object
-                
+
                 // Yelp return a Json String
                 String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
 
                 try {
                     JSONObject json = new JSONObject(businessesList);           // parse string to json
                     JSONArray businesses = json.getJSONArray("businesses");     // get all restaurants based on key "businesses", return a jsonarray
+
+                    totalResultFromYelp = (long)json.getLong("total");  // get total result
 
                     // loop through every single json object in array
                     for(int i = 0; i< businesses.length();i++){
@@ -106,6 +113,16 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                         // add new data restaurant object to array list
                         al.add(new Data(restaurantID,restaurantName, restaurantCatergories, restaurantImage_url,restaurantRating,restaurantPhone,restaurantAddress,restaurantLatitude,restaurantLongitude));
+
+                        //Get more restaurants once we run out
+                        if(i == businesses.length() - 1) {
+                            businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset+limitSearch*countGroupOffset); // send another request to yelp with different offset
+                            json = new JSONObject(businessesList);
+                            JSONArray moreBusinesses = json.getJSONArray("businesses");
+                            businesses = moreBusinesses;
+                            countGroupOffset++;
+                            i = -1;
+                        }
                     }
                 }
                 catch (Exception e){
