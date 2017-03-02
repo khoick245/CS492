@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     private SwipeFlingAdapterView flingContainer;
 
     String term = "restaurant";     // term to search
-    double latitude = 33.80573;     // current position
-    double longitude = -117.94514;  // current position
     int radius = 650;              // radius to search
     int limitSearch = 5;           // limit the result return
     int offset = 0;                 // offset of json object return in array
