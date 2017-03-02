@@ -119,7 +119,12 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                         JSONObject location = (JSONObject) restaurant.get("location"); // get location
                         JSONArray addressList =  location.getJSONArray("display_address"); // get display address in location
-                        String restaurantAddress = addressList.get(0) + ", " + addressList.get(1); // get display address as string
+                        String restaurantAddress = "";
+                        for(int k=0;k<addressList.length();k++)  // get display address as string
+                            if(k==addressList.length()-1)
+                                restaurantAddress += addressList.get(k);
+                            else
+                                restaurantAddress += addressList.get(k) + ", ";
 
                         JSONObject coordinate = (JSONObject) location.get("coordinate");    // get position
                         String restaurantLatitude = coordinate.get("latitude").toString();
