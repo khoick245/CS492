@@ -34,8 +34,10 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     private SwipeFlingAdapterView flingContainer;
 
     String term = "restaurant";     // term to search
-    int radius = 650;              // radius to search
-    int limitSearch = 5;           // limit the result return
+    double latitude = 33.783784;     // current position
+    double longitude = -118.105181;  // current position
+    int radius = 3000;              // radius to search
+    int limitSearch = 40;           // limit the result return
     int offset = 0;                 // offset of json object return in array
     int countGroupOffset = 1;       // used to group offset base on limitSearch
     long totalResultFromYelp = 0;    // how many restaurant yelp find out every time of searching
@@ -55,8 +57,8 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
-        String s1="";
-        String s2="";
+        //String s1="";
+        //String s2="";
 
         // send asynchonous request to Yelp server
         new AsyncTask<Void, Void, String>() {
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 Yelp yelp = Yelp.getYelp(MainActivity.this);    // create yelp object
 
                 // Yelp return a Json String
-                String businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset); // pass parameter to search method
+                String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
 
                 try {
                     JSONObject json = new JSONObject(businessesList);           // parse string to json
@@ -80,14 +82,18 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                         String restaurantID = restaurant.get("id").toString();  // get restaurant id based on the key "id"
                         String restaurantName = restaurant.get("name").toString(); // get restaurant id based on the key "name"
 
-                        String restaurantCatergories = null;    
-                        JSONArray catergoriesJsonObject = (JSONArray)restaurant.get("categories");  // take jsonarray of catergories
-                        List subList = new ArrayList();
-                        for(int j =0;j<catergoriesJsonObject.length();j++){
-                            JSONArray obj = (JSONArray)catergoriesJsonObject.get(j); // get every single element in json array
-                            subList.add(obj.get(0).toString()); // get first element of a json catergory, put it into list
+                        String restaurantCatergories = null;
+                        if(restaurant.has("categories")) {
+                            JSONArray catergoriesJsonObject = (JSONArray) restaurant.get("categories");  // take jsonarray of catergories
+                            List subList = new ArrayList();
+                            for (int j = 0; j < catergoriesJsonObject.length(); j++) {
+                                JSONArray obj = (JSONArray) catergoriesJsonObject.get(j); // get every single element in json array
+                                subList.add(obj.get(0).toString()); // get first element of a json catergory, put it into list
+                            }
+                            restaurantCatergories = TextUtils.join(", ", subList); // change the list to string form
                         }
-                        restaurantCatergories = TextUtils.join(", ", subList); // change the list to string form
+                        else
+                        restaurantCatergories = " ";
 
                         String restaurantImage_url = "";
                         if(restaurant.has("image_url")){  // get image url
@@ -97,9 +103,19 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                         else
                             restaurantImage_url = " ";
 
-                        String restaurantRating = restaurant.get("rating").toString();  // get rating
-                        String restaurantPhone = restaurant.get("phone").toString();    // get phone
-                        restaurantPhone = restaurantPhone.substring(0,3) + "-" + restaurantPhone.substring(3,6) + "-" + restaurantPhone.substring(6, restaurantPhone.length()); // format the phone
+                        String restaurantRating = "";
+                        if(restaurant.has("rating"))
+                            restaurantRating = restaurant.get("rating").toString();  // get rating
+                        else
+                            restaurantRating = " ";
+
+                        String restaurantPhone = "";
+                        if(restaurant.has("phone")) {
+                            restaurantPhone = restaurant.get("phone").toString();    // get phone
+                            restaurantPhone = restaurantPhone.substring(0, 3) + "-" + restaurantPhone.substring(3, 6) + "-" + restaurantPhone.substring(6, restaurantPhone.length()); // format the phone
+                        }
+                        else
+                            restaurantPhone = " ";
 
                         JSONObject location = (JSONObject) restaurant.get("location"); // get location
                         JSONArray addressList =  location.getJSONArray("display_address"); // get display address in location
@@ -125,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 }
                 catch (Exception e){
                     System.out.print(e.getStackTrace());
+                    String s3="";
                 }
 
                 return null;
