@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 Yelp yelp = Yelp.getYelp(MainActivity.this);    // create yelp object
 
                 // Yelp return a Json String
-                String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
+                String businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset); // pass parameter to search method
 
                 try {
                     JSONObject json = new JSONObject(businessesList);           // parse string to json
