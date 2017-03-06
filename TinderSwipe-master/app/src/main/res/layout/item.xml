@@ -16,17 +16,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="357dp"
             android:layout_marginBottom="6dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:background="@drawable/shape2"
-            android:gravity="center_horizontal"
+            android:gravity="center_vertical"
             android:orientation="vertical" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="413dp"
             android:layout_marginBottom="12dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
@@ -38,7 +38,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="412dp"
         android:layout_marginBottom="18dp"
         android:background="@drawable/shape"
         android:gravity="center_horizontal"
@@ -76,7 +76,7 @@
                     android:padding="4dp"
                     android:textColor="#787878"
                     android:textSize="16sp"
-                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                    tools:text="Lorem ipsum dolor sit amet, consectetur adip" />
             </ScrollView>
         </LinearLayout>
 

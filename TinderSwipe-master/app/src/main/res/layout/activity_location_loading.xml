@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background2"
+    tools:context="com.nkdroid.tinderswipe.LocationLoading">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20pt"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Fooder"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/loading"
+        android:background="@null"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/view" />
+</RelativeLayout>
