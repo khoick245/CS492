@@ -1,7 +1,7 @@
 package com.nkdroid.tinderswipe;
 
 /**
- * Created by nirav on 05/10/15.
+ * Created by khoinguyen on 3/6/17.
  */
 public class Data {
 
@@ -14,6 +14,9 @@ public class Data {
     private  String address;
     private  String latitude;
     private  String longitude;
+    private  String status;
+
+    public Data(){}
 
     public Data(String id, String name, String categories, String image_url, String rating, String phone, String address, String latitude, String longitude) {
         this.id = id;
@@ -25,6 +28,14 @@ public class Data {
         this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public String getId() {

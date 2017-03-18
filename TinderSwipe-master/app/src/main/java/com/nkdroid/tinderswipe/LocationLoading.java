@@ -17,7 +17,7 @@ public class LocationLoading extends AppCompatActivity {
     public static int i =0; //Used to prevent the the next activity to be loaded over and over
     public LocationManager locationManager; //Used to help retrieve our location via GPS
     public LocationListener locationListener; //Used to see if our location is changing in the way we set it up
-    public static LatLng latLng;
+    public static LatLng latLng, lastLatLng;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +27,14 @@ public class LocationLoading extends AppCompatActivity {
             @Override
             public void onLocationChanged(Location location) { //detects if our locations has been detected and/or changed
                 latLng = new LatLng(location.getLatitude(),location.getLongitude()); //gets the users current latitude and longitude
+
                 if(i==0) { //the 'i' we set up.
+                    finish();
                     Intent intent = new Intent("com.nkdroid.tinderswipe.MainActivity"); //used to start our next activity
                     startActivity(intent); //used to actually start the activity
                     i++; //increments 'i' so that the activity wont start up over and over
+                    //lastLatLng = latLng;
+                    //finish();
                 }
             }
 
@@ -63,7 +67,6 @@ public class LocationLoading extends AppCompatActivity {
             return;
         }
         locationManager.requestLocationUpdates("gps", 5000, 0, locationListener); // used to tell the location manager how often to update
-
     }
 
     @Override
