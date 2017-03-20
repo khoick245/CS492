@@ -76,3 +76,20 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
 }
+
+
+//
+//{
+//        "rules": {
+//        "users": {
+//        "$uid": {
+//        ".read": "auth != null && auth.uid == $uid",
+//        ".write": "auth != null && auth.uid == $uid",
+//        "restaurants": {
+//        "id": {
+//        }
+//        }
+//        }
+//        }
+//        }
+//        }

@@ -3,6 +3,7 @@
     <style name="AppTheme" parent="AppTheme.Base">
 
     </style>
+
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/primaryColor</item>
@@ -18,5 +19,9 @@
         <item name="min_adapter_stack">6</item>
         <item name="max_visible">4</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

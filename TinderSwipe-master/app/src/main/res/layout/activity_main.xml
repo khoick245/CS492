@@ -15,12 +15,11 @@
         android:background="@drawable/background2">
 
 
-        <com.nkdroid.tinderswipe.tindercard.SwipeFlingAdapterView
-            android:id="@+id/frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background2"
-            app:rotation_degrees="15.5" />
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/button5" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,6 +30,13 @@
             android:textSize="40dp"
             android:id="@+id/name"
             android:layout_gravity="center_horizontal|top" />
+
+        <com.nkdroid.tinderswipe.tindercard.SwipeFlingAdapterView
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background2"
+            app:rotation_degrees="15.5" />
 
     </FrameLayout>
 

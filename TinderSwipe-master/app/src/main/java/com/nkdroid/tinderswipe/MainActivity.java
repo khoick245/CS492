@@ -1,7 +1,5 @@
 package com.nkdroid.tinderswipe;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -15,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,17 +26,17 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.nkdroid.tinderswipe.DislikeRestaurant.DislikeRestaurantActivity;
 import com.nkdroid.tinderswipe.tindercard.FlingCardListener;
 import com.nkdroid.tinderswipe.tindercard.SwipeFlingAdapterView;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
+import static android.R.attr.id;
 import static com.nkdroid.tinderswipe.LocationLoading.i;
 import static com.nkdroid.tinderswipe.R.layout.item;
 
@@ -59,16 +58,16 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     long totalResultFromYelp = 0;       // how many restaurant yelp find out every time of searching
     String status = "";                 // like/dislike
 
-    private FirebaseAuth mFirebaseAuth;
-    private FirebaseUser mFirebaseUser;
-    private DatabaseReference mDatabase;
-    private String mUserId;
+    public static FirebaseAuth mFirebaseAuth;
+    public static FirebaseUser mFirebaseUser;
+    public static DatabaseReference mDatabase;
+    public static String mUserId;
 
-    List<String> listOfRestaurantID = new ArrayList<>();
-    List<Data> listOfLikedRestaurant = new ArrayList<>();
-    List<Data> listOfDislikedRestaurant = new ArrayList<>();
+    public final static List<Data> listOfLikedRestaurant = new ArrayList<>();
+    public final static List<Data> listOfDislikedRestaurant = new ArrayList<>();
 
-    static int co = 0;
+
+    Button buttonTest;
 
     public static void removeBackground() {
         viewHolder.background.setVisibility(View.GONE);
@@ -83,16 +82,22 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         //latitude = LocationLoading.latLng.latitude;
         //longitude = LocationLoading.latLng.longitude;
 
+        buttonTest = (Button)findViewById(R.id.button5);
+
+        buttonTest.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //Toast.makeText(MainActivity.this, "test button", Toast.LENGTH_LONG).show();
+                Intent dislikeIntend = new Intent(MainActivity.this, DislikeRestaurantActivity.class);
+                startActivity(dislikeIntend);
+            }
+        });
+
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
         // Initialize Firebase Auth and Database Reference
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
-        if(mDatabase != null){
-
-        }
 
         if (mFirebaseUser == null) {
             // Not logged in, launch the Log In activity
@@ -101,6 +106,40 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
             mUserId = mFirebaseUser.getUid();
 
+            // -----------------------------------------------------------
+            // take data from firebase
+            mDatabase.child("users").child(mUserId).child("restaurants").addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                    if(dataSnapshot.child("status").getValue().equals("Dislike"))
+                        listOfDislikedRestaurant.add(dataSnapshot.getValue(Data.class));
+                    else
+                        listOfLikedRestaurant.add(dataSnapshot.getValue(Data.class));
+                    //Log.d("CREATION",dataSnapshot.child("id").getValue().toString());
+                }
+
+                @Override
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+                    //adapter.remove((String) dataSnapshot.child("title").getValue());
+                }
+
+                @Override
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+            // -----------------------------------------------------------
 
             // send asynchonous request to Yelp server
             new AsyncTask<Void, Void, String>() {
@@ -120,9 +159,6 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                         JSONArray businesses = json.getJSONArray("businesses");     // get all restaurants based on key "businesses", return a jsonarray
 
                         totalResultFromYelp = (long)json.getLong("total");  // get total result
-
-                        for(int cou = 0;i<listOfRestaurantID.size();i++)
-                            Log.d("CREATION", listOfRestaurantID.get(cou));
 
                         // loop through every single json object in array
                         for(int i = 0; i< businesses.length();i++){
@@ -176,9 +212,18 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                                 else
                                     restaurantAddress += addressList.get(k) + ", ";
 
-                            JSONObject coordinate = (JSONObject) location.get("coordinate");    // get position
-                            String restaurantLatitude = coordinate.get("latitude").toString();
-                            String restaurantLongitude = coordinate.get("longitude").toString();
+                            JSONObject coordinate = null;
+                            String restaurantLatitude = "";
+                            String restaurantLongitude = "";
+                            if(location.has("coordinate")) {
+                                coordinate = (JSONObject) location.get("coordinate");    // get position
+                                restaurantLatitude = coordinate.get("latitude").toString();
+                                restaurantLongitude = coordinate.get("longitude").toString();
+                            }
+                            else {
+                                restaurantLatitude = "";
+                                restaurantLongitude = "";
+                            }
 
                             // add new data restaurant object to array list
                             al.add(new Data(restaurantID,restaurantName, restaurantCatergories, restaurantImage_url,restaurantRating,restaurantPhone,restaurantAddress,restaurantLatitude,restaurantLongitude));
@@ -229,45 +274,6 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 //                    String s1;
 //                    String s2;
 //
-//                    mDatabase.child("users").child(mUserId).child("restaurants").addChildEventListener(new ChildEventListener() {
-//                        @Override
-//                        public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//
-//                            if(resID != null)
-//                                for(DataSnapshot data : dataSnapshot.getChildren())
-//                                    if(data.child("id").getValue().equals(resID)){
-//                                        data.getRef().removeValue();
-//                                    }
-
-
-
-//                            listOfRestaurantID.add((String)dataSnapshot.child("id").getValue());
-//                            if(dataSnapshot.child("status").getValue().equals("Like"))
-//                                listOfLikedRestaurant.add((Data) dataSnapshot.getValue(Data.class));
-//                            if(dataSnapshot.child("status").getValue().equals("Dislike"))
-//                                listOfDislikedRestaurant.add((Data) dataSnapshot.getValue(Data.class));
-//                        }
-
-//                        @Override
-//                        public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onChildRemoved(DataSnapshot dataSnapshot) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onCancelled(DatabaseError databaseError) {
-//
-//                        }
-//                    });
 
                     Data saveData = al.get(0);
                     saveData.setStatus("Dislike");
