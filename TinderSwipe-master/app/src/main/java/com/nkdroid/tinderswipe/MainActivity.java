@@ -26,7 +26,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.nkdroid.tinderswipe.DislikeRestaurant.DislikeRestaurantActivity;
+import com.nkdroid.tinderswipe.RestaurantList.DislikeRestaurantActivity;
+import com.nkdroid.tinderswipe.RestaurantList.LikeRestaurantActivity;
 import com.nkdroid.tinderswipe.tindercard.FlingCardListener;
 import com.nkdroid.tinderswipe.tindercard.SwipeFlingAdapterView;
 
@@ -36,8 +37,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.R.attr.id;
-import static com.nkdroid.tinderswipe.LocationLoading.i;
 import static com.nkdroid.tinderswipe.R.layout.item;
 
 
@@ -68,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
 
     Button buttonTest;
+    Button buttonTest1;
 
     public static void removeBackground() {
         viewHolder.background.setVisibility(View.GONE);
@@ -89,6 +89,16 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 //Toast.makeText(MainActivity.this, "test button", Toast.LENGTH_LONG).show();
                 Intent dislikeIntend = new Intent(MainActivity.this, DislikeRestaurantActivity.class);
                 startActivity(dislikeIntend);
+            }
+        });
+
+        buttonTest1 = (Button)findViewById(R.id.button3);
+
+        buttonTest1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //Toast.makeText(MainActivity.this, "test button", Toast.LENGTH_LONG).show();
+                Intent likeIntend = new Intent(MainActivity.this, LikeRestaurantActivity.class);
+                startActivity(likeIntend);
             }
         });
 
@@ -267,13 +277,6 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                 @Override
                 public void onLeftCardExit(Object dataObject) {
-                    //Restaurant restaurant = new Restaurant(al.get(0).getId(),al.get(0).getImage_url(), "Dislike", Calendar.getInstance().getTime().toString());
-
-//                    final String resID = al.get(0).getId();
-//
-//                    String s1;
-//                    String s2;
-//
 
                     Data saveData = al.get(0);
                     saveData.setStatus("Dislike");
@@ -287,7 +290,6 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                 @Override
                 public void onRightCardExit(Object dataObject) {
-                    //Restaurant restaurant = new Restaurant(al.get(0).getId(),al.get(0).getImage_url(), "Like", Calendar.getInstance().getTime().toString());
                     Data saveData = al.get(0);
                     saveData.setStatus("Like");
                     al.remove(0);

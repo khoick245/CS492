@@ -10,34 +10,29 @@
     <!-- activity view -->
     <FrameLayout
         android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-        android:background="@drawable/background2">
-
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:id="@+id/button5" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Fooder"
-            android:textStyle="bold"
-            android:textSize="40dp"
-            android:id="@+id/name"
-            android:layout_gravity="center_horizontal|top" />
+        android:layout_height="match_parent">
 
         <com.nkdroid.tinderswipe.tindercard.SwipeFlingAdapterView
             android:id="@+id/frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/background2"
-            app:rotation_degrees="15.5" />
+            app:rotation_degrees="15.5"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
+        <Button
+            android:text="Dislike List"
+            android:layout_width="212dp"
+            android:layout_height="30dp"
+            android:id="@+id/button5" />
+
+        <Button
+            android:text="Like List"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:id="@+id/button3" />
     </FrameLayout>
 
 </LinearLayout>

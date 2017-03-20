@@ -46,7 +46,8 @@
         <activity android:name=".LocationLoading" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LogInActivity" />
-        <activity android:name=".DislikeRestaurant.DislikeRestaurantActivity"></activity>
+        <activity android:name=".RestaurantList.DislikeRestaurantActivity" />
+        <activity android:name=".RestaurantList.LikeRestaurantActivity"></activity>
     </application>
 
 </manifest>
