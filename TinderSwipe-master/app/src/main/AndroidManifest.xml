@@ -47,7 +47,8 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".RestaurantList.DislikeRestaurantActivity" />
-        <activity android:name=".RestaurantList.LikeRestaurantActivity"></activity>
+        <activity android:name=".RestaurantList.LikeRestaurantActivity" />
+        <activity android:name=".RestaurantList.DetailsActivity"></activity>
     </application>
 
 </manifest>
