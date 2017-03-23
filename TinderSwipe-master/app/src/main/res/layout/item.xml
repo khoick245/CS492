@@ -12,7 +12,7 @@
     <FrameLayout
         android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="427dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,25 +35,6 @@
             android:orientation="vertical" />
 
     </FrameLayout>
-
-
-    <View
-        android:id="@+id/item_swipe_left_indicator"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:alpha="0"
-
-        android:background="@drawable/like" />
-
-    <View
-        android:id="@+id/item_swipe_right_indicator"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="right"
-        android:alpha="0"
-
-
-        android:background="@drawable/nope" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -85,7 +66,7 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="174dp">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/bookText"
@@ -100,5 +81,24 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+    <View
+        android:id="@+id/item_swipe_left_indicator"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:alpha="0"
+
+        android:background="@drawable/like" />
+
+    <View
+        android:id="@+id/item_swipe_right_indicator"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="right"
+        android:alpha="0"
+
+
+        android:background="@drawable/nope" />
 
 </FrameLayout>
