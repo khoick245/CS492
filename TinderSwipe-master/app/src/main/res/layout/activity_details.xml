@@ -11,6 +11,7 @@
     tools:context="com.nkdroid.tinderswipe.RestaurantList.DetailsActivity">
 
 
+<<<<<<< HEAD
     <ImageView
         android:id="@+id/image"
         android:layout_width="300dp"
@@ -23,6 +24,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+=======
+>>>>>>> 688ad6ba765b19cc997fa78538882a8586b40e3b
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -32,7 +35,22 @@
         android:textColor="#787878"
         android:textSize="16sp"
         tools:text="Lorem ipsum dolor sit amet, consectetur adip"
+<<<<<<< HEAD
         android:layout_centerVertical="true"
+=======
+        android:layout_below="@+id/image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="127dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+>>>>>>> 688ad6ba765b19cc997fa78538882a8586b40e3b
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
