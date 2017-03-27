@@ -1,9 +1,13 @@
 package com.nkdroid.tinderswipe;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by khoinguyen on 3/6/17.
  */
-public class Data {
+//@SuppressWarnings("serial")
+public class Data implements Parcelable{
 
     private  String id;
     private  String name;
@@ -74,4 +78,46 @@ public class Data {
     public String getLongitude() {
         return longitude;
     }
+
+    public Data(Parcel in){
+        String[] data = new String[10];
+        in.readStringArray(data);
+
+        this.id = data[0];
+        this.name = data[1];
+        this.categories = data[2];
+        this.image_url = data[3];
+        this.rating = data[4];
+        this.phone = data[5];
+        this.address = data[6];
+        this.latitude = data[7];
+        this.longitude = data[8];
+        this.status = data[9];
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeStringArray(new String[]{this.id,this.name,this.categories,this.image_url,this.rating,this.phone,this.address,this.latitude,this.longitude,this.status});
+    }
+
+
+    public static final Parcelable.Creator<Data> CREATOR= new Parcelable.Creator<Data>() {
+
+        @Override
+        public Data createFromParcel(Parcel source) {
+// TODO Auto-generated method stub
+            return new Data(source);  //using parcelable constructor
+        }
+
+        @Override
+        public Data[] newArray(int size) {
+// TODO Auto-generated method stub
+            return new Data[size];
+        }
+    };
 }

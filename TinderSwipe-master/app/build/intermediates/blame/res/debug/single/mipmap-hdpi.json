@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/mipmap-hdpi/foodericon.png",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/mipmap-hdpi/foodericon.png"
+    }
+]

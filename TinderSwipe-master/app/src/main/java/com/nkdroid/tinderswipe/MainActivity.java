@@ -48,8 +48,10 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     private SwipeFlingAdapterView flingContainer;
 
     String term = "restaurant";         // term to search
-    double latitude = 33.783784;        // current position
-    double longitude = -118.105181;     // current position
+//    double latitude = 33.783784;        // current position
+//    double longitude = -118.105181;     // current position
+    public double latitude = 0;        // current position
+    public double longitude = 0;     // current position
     int radius = 3000;                  // radius to search
     int limitSearch = 40;               // limit the result return
     int offset = 0;                     // offset of json object return in array
@@ -159,8 +161,8 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
 
                     // Yelp return a Json String
-                    //String businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset); // pass parameter to search method
-                    String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
+                    String businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset); // pass parameter to search method
+                    //String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
 
                     try {
 
@@ -240,8 +242,8 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                             //Get more restaurants once we run out
                             if(i == businesses.length() - 1) {
-                                //businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset+limitSearch*countGroupOffset); // send another request to yelp with different offset
-                                businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
+                                businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset+limitSearch*countGroupOffset); // send another request to yelp with different offset
+                                //businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
                                 json = new JSONObject(businessesList);
                                 JSONArray moreBusinesses = json.getJSONArray("businesses");
                                 businesses = moreBusinesses;

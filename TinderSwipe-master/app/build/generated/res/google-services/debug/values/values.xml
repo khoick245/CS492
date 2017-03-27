@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">157060637926-8vbjmh00ugppfl2th5kj9g4m8ad22dcp.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://fooder-624c9.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">157060637926</string>
+    <string name="google_api_key" translatable="false">AIzaSyBtAUgk0M4jMG9SbQVlCOJnAZl_JHhWI24</string>
+    <string name="google_app_id" translatable="false">1:157060637926:android:c207ef57f9ab0d5b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBtAUgk0M4jMG9SbQVlCOJnAZl_JHhWI24</string>
+    <string name="google_storage_bucket" translatable="false">fooder-624c9.appspot.com</string>
+</resources>

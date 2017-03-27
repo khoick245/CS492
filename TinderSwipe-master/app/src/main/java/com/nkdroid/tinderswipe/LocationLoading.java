@@ -9,33 +9,35 @@ import android.location.LocationManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 public class LocationLoading extends AppCompatActivity {
-    public static int i =0; //Used to prevent the the next activity to be loaded over and over
-    public LocationManager locationManager; //Used to help retrieve our location via GPS
-    public LocationListener locationListener; //Used to see if our location is changing in the way we set it up
-    public static LatLng latLng, lastLatLng;
+    public int i =0;     //Used to prevent the the next activity to be loaded over and over
+    public LocationManager locationManager;     //Used to help retrieve our location via GPS or network provider
+    public LocationListener locationListener;    //Used to see if our location is changing in the way we set it up
+    public static LatLng latLng;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_loading);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE); //Calls the ability to retrieve our location service
-        locationListener = new LocationListener() { //sets up the listener
-            @Override
-            public void onLocationChanged(Location location) { //detects if our locations has been detected and/or changed
-                latLng = new LatLng(location.getLatitude(),location.getLongitude()); //gets the users current latitude and longitude
 
-                if(i==0) { //the 'i' we set up.
-                    finish();
-                    Intent intent = new Intent("com.nkdroid.tinderswipe.MainActivity"); //used to start our next activity
-                    startActivity(intent); //used to actually start the activity
-                    i++; //increments 'i' so that the activity wont start up over and over
-                    //lastLatLng = latLng;
-                    //finish();
+        locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {  //detects if our locations has been detected and/or changed
+                latLng = new LatLng(location.getLatitude(),location.getLongitude());    //gets the users current latitude and longitude
+                if(i==0) {      //the 'i' we set up.
+                    Intent intent = new Intent("com.nkdroid.tinderswipe.MainActivity");     //used to start our next activity
+                    startActivity(intent);  //used to actually start the activity
+                    i++;    //increments 'i' so that the activity wont start up over and over
                 }
+
+                finish();
             }
 
             @Override
@@ -66,7 +68,8 @@ public class LocationLoading extends AppCompatActivity {
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        locationManager.requestLocationUpdates("gps", 5000, 0, locationListener); // used to tell the location manager how often to update
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener); // used to tell the location manager how often to update
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener); // used to tell the location manager how often to update
     }
 
     @Override

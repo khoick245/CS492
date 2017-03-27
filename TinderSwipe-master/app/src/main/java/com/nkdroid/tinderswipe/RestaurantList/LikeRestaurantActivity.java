@@ -1,12 +1,19 @@
 package com.nkdroid.tinderswipe.RestaurantList;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.nkdroid.tinderswipe.Data;
 import com.nkdroid.tinderswipe.MainActivity;
 import com.nkdroid.tinderswipe.R;
+
+import java.io.Serializable;
 
 import static com.nkdroid.tinderswipe.R.id.gridView;
 
@@ -30,18 +37,17 @@ public class LikeRestaurantActivity extends AppCompatActivity {
         gridAdapter = new GridViewAdapter(this, R.layout.grid_item_layout, MainActivity.listOfLikedRestaurant);
         gridView.setAdapter(gridAdapter);
 
-//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-//                ImageItem item = (ImageItem) parent.getItemAtPosition(position);
-//
-//                //Create intent
-//                Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-//                intent.putExtra("title", item.getTitle());
-//                intent.putExtra("image", item.getImage());
-//
-//                //Start details activity
-//                startActivity(intent);
-//            }
-//        });
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                Data item = (Data) parent.getItemAtPosition(position);
+
+                //Create intent
+                Intent intent = new Intent(LikeRestaurantActivity.this, DetailsActivity.class);
+                intent.putExtra("myData", item);
+
+                //Start details activity
+                startActivity(intent);
+            }
+        });
     }
 }
