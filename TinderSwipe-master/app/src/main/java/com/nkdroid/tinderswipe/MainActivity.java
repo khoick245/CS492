@@ -2,6 +2,7 @@ package com.nkdroid.tinderswipe;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     public final static List<Data> listOfLikedRestaurant = new ArrayList<>();
     public final static List<Data> listOfDislikedRestaurant = new ArrayList<>();
 
+    MediaPlayer likeSound = null;
+    MediaPlayer dislikeSound = null;
+
 
     Button buttonTest;
     Button buttonTest1;
@@ -83,6 +87,9 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
         //latitude = LocationLoading.latLng.latitude;
         //longitude = LocationLoading.latLng.longitude;
+
+        likeSound = MediaPlayer.create(this, R.raw.like);
+        dislikeSound = MediaPlayer.create(this, R.raw.dislike);
 
         buttonTest = (Button)findViewById(R.id.button5);
 
@@ -280,18 +287,22 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 @Override
                 public void onLeftCardExit(Object dataObject) {
 
+                    likeSound.start();
+
                     Data saveData = al.get(0);
                     saveData.setStatus("Dislike");
                     al.remove(0);
                     myAppAdapter.notifyDataSetChanged();
 
                     // add restaurant to realtime database on firebase
-                    //mDatabase.child("users").child(mUserId).child("restaurants").push().setValue(saveData);
                     mDatabase.child("users").child(mUserId).child("restaurants").child(saveData.getId()).setValue(saveData);
                 }
 
                 @Override
                 public void onRightCardExit(Object dataObject) {
+
+                    dislikeSound.start();
+
                     Data saveData = al.get(0);
                     saveData.setStatus("Like");
                     al.remove(0);

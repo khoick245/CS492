@@ -192,6 +192,10 @@
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/layout/activity_location.xml",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/layout/activity_location.xml"
+    },
+    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/notification_template_lines.xml"
     },
