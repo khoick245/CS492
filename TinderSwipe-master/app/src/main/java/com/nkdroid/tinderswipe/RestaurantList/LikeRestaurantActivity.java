@@ -7,20 +7,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 import com.nkdroid.tinderswipe.Data;
 import com.nkdroid.tinderswipe.MainActivity;
 import com.nkdroid.tinderswipe.R;
 
 import java.io.Serializable;
 
+import static com.nkdroid.tinderswipe.MainActivity.mDatabase;
+import static com.nkdroid.tinderswipe.MainActivity.mUserId;
 import static com.nkdroid.tinderswipe.R.id.gridView;
 
 public class LikeRestaurantActivity extends AppCompatActivity {
 
     private GridView gridView;
     private GridViewAdapter gridAdapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +54,13 @@ public class LikeRestaurantActivity extends AppCompatActivity {
                 Data item = (Data) parent.getItemAtPosition(position);
 
                 //Create intent
-                Intent intent = new Intent(LikeRestaurantActivity.this, DetailsActivity.class);
+                Intent intent = new Intent(LikeRestaurantActivity.this, DetailsActivity.class).putExtra("From","LikeRestaurantActivity");
                 intent.putExtra("myData", item);
-
+                finish();
                 //Start details activity
                 startActivity(intent);
             }
         });
+
     }
 }

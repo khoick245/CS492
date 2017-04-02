@@ -144,7 +144,6 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                 @Override
                 public void onChildRemoved(DataSnapshot dataSnapshot) {
-                    //adapter.remove((String) dataSnapshot.child("title").getValue());
                 }
 
                 @Override

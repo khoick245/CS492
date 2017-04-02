@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,6 +49,7 @@ public class GridViewAdapter extends ArrayAdapter<Data> {
             holder = new ViewHolder();
             holder.imageTitle = (TextView) row.findViewById(R.id.text);
             holder.image = (ImageView) row.findViewById(R.id.image);
+            //holder.deleteButton = (ImageButton) row.findViewById(R.id.imageButton);
             row.setTag(holder);
         } else {
             holder = (ViewHolder) row.getTag();
@@ -62,6 +64,7 @@ public class GridViewAdapter extends ArrayAdapter<Data> {
     static class ViewHolder {
         TextView imageTitle;
         ImageView image;
+        //ImageButton deleteButton;
     }
 
     private Bitmap getImageBitmap(String url) {

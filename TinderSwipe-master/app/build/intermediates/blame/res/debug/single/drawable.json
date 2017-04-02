@@ -68,6 +68,10 @@
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/drawable/background.png"
     },
     {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable/delete.png",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/drawable/delete.png"
+    },
+    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable/loading_icon.gif",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/drawable/loading_icon.gif"
     },
