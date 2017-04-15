@@ -21,4 +21,16 @@
         android:layout_marginStart="108dp"
         android:layout_marginBottom="24dp"
         android:id="@+id/logoutButton" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logoutButton"
+        android:layout_alignRight="@+id/logoutButton"
+        android:layout_alignEnd="@+id/logoutButton"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="202dp"
+        android:id="@+id/SoundToggleButton" />
 </RelativeLayout>

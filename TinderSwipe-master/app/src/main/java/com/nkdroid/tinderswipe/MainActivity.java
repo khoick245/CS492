@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     public final static List<Data> listOfLikedRestaurant = new ArrayList<>();
     public final static List<Data> listOfDislikedRestaurant = new ArrayList<>();
 
-    MediaPlayer likeSound = null;
-    MediaPlayer dislikeSound = null;
+    public static MediaPlayer likeSound = null;
+    public static MediaPlayer dislikeSound = null;
 
 
     Button buttonTest;
