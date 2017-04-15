@@ -66,6 +66,7 @@
         <activity android:name="com.nkdroid.tinderswipe.RestaurantList.DislikeRestaurantActivity" />
         <activity android:name="com.nkdroid.tinderswipe.RestaurantList.LikeRestaurantActivity" />
         <activity android:name="com.nkdroid.tinderswipe.RestaurantList.DetailsActivity" />
+        <activity android:name="com.nkdroid.tinderswipe.Setting" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

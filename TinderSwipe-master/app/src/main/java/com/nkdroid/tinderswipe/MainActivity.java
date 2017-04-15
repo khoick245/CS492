@@ -16,8 +16,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
     Button buttonTest;
     Button buttonTest1;
+    ImageButton settingButton;
 
     public static void removeBackground() {
         viewHolder.background.setVisibility(View.GONE);
@@ -84,9 +87,18 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Toast.makeText(MainActivity.this, "6", Toast.LENGTH_LONG).show();
 
         //latitude = LocationLoading.latLng.latitude;
         //longitude = LocationLoading.latLng.longitude;
+
+        settingButton = (ImageButton)findViewById(R.id.imageButton2);
+        settingButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent settingIntend = new Intent(MainActivity.this, Setting.class);
+                startActivity(settingIntend);
+            }
+        });
 
         likeSound = MediaPlayer.create(this, R.raw.like);
         dislikeSound = MediaPlayer.create(this, R.raw.dislike);
@@ -117,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        //Toast.makeText(MainActivity.this, mFirebaseAuth.toString(), Toast.LENGTH_LONG).show();
 
         if (mFirebaseUser == null) {
             // Not logged in, launch the Log In activity

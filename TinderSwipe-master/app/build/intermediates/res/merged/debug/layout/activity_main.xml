@@ -55,6 +55,12 @@
             android:id="@+id/button5"
             android:visibility="visible"/>
 
+        <ImageButton
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:id="@+id/imageButton2"
+            android:background="@drawable/settings" />
+
 
     </FrameLayout>
 

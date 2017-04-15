@@ -12,6 +12,10 @@
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/layout/activity_like_restaurant.xml"
     },
     {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/layout/activity_setting.xml",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/layout/activity_setting.xml"
+    },
+    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/abc_action_mode_bar.xml"
     },

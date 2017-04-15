@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -61,16 +62,22 @@ public class LogInActivity extends AppCompatActivity {
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 } else {
+                    //Toast.makeText(LogInActivity.this, "1", Toast.LENGTH_LONG).show();
                     mFirebaseAuth.signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
+                                    //Toast.makeText(LogInActivity.this, "2", Toast.LENGTH_LONG).show();
                                     if (task.isSuccessful()) {
+                                        //Toast.makeText(LogInActivity.this, "3", Toast.LENGTH_LONG).show();
                                         Intent intent = new Intent(LogInActivity.this, MainActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        //Toast.makeText(LogInActivity.this, "4", Toast.LENGTH_LONG).show();
                                         startActivity(intent);
+                                        //Toast.makeText(LogInActivity.this, "5", Toast.LENGTH_LONG).show();
                                     } else {
+
                                         AlertDialog.Builder builder = new AlertDialog.Builder(LogInActivity.this);
                                         builder.setMessage(task.getException().getMessage())
                                                 .setTitle(R.string.login_error_title)
