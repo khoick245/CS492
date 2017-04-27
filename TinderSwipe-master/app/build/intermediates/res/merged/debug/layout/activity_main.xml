@@ -12,7 +12,10 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background2">
+        android:background="@drawable/background2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
 
         <com.nkdroid.tinderswipe.tindercard.SwipeFlingAdapterView
@@ -46,6 +49,20 @@
             android:id="@+id/button3"
             android:visibility="visible"/>
 
+        <ImageButton
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:id="@+id/imageButton2"
+            android:background="@drawable/settings" />
+
+        <Button
+            android:text="Undo"
+            android:layout_marginTop="480dp"
+            android:layout_marginLeft="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUndo" />
+
         <Button
             android:background="@drawable/thumbsdown"
             android:layout_marginTop="480dp"
@@ -54,12 +71,6 @@
             android:layout_height="78dp"
             android:id="@+id/button5"
             android:visibility="visible"/>
-
-        <ImageButton
-            android:layout_width="53dp"
-            android:layout_height="53dp"
-            android:id="@+id/imageButton2"
-            android:background="@drawable/settings" />
 
 
     </FrameLayout>

@@ -38,7 +38,10 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import static com.nkdroid.tinderswipe.R.layout.item;
 
@@ -51,10 +54,10 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     private SwipeFlingAdapterView flingContainer;
 
     String term = "restaurant";         // term to search
-//    double latitude = 33.783784;        // current position
-//    double longitude = -118.105181;     // current position
-    public double latitude = 0;        // current position
-    public double longitude = 0;     // current position
+    double latitude = 33.783784;        // current position
+    double longitude = -118.105181;     // current position
+    //public double latitude = 0;        // current position
+    //public double longitude = 0;     // current position
     int radius = 3000;                  // radius to search
     int limitSearch = 40;               // limit the result return
     int offset = 0;                     // offset of json object return in array
@@ -76,12 +79,20 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
     Button buttonTest;
     Button buttonTest1;
+    Button btnUndo;
     ImageButton settingButton;
+
+    Data temp;
+    long countRestaurant = 0;
+
+    Button button2test;
 
     public static void removeBackground() {
         viewHolder.background.setVisibility(View.GONE);
         myAppAdapter.notifyDataSetChanged();
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +113,16 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
         likeSound = MediaPlayer.create(this, R.raw.like);
         dislikeSound = MediaPlayer.create(this, R.raw.dislike);
+
+        btnUndo = (Button)findViewById(R.id.btnUndo);
+
+        btnUndo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "The last restaurant will be loaded on next swipe", Toast.LENGTH_LONG).show();
+                al.add(1,temp);
+                myAppAdapter.notifyDataSetChanged();
+            }
+        });
 
         buttonTest = (Button)findViewById(R.id.button5);
 
@@ -181,14 +202,25 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
 
                     // Yelp return a Json String
-                    String businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset); // pass parameter to search method
-                    //String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
+                    //String businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset); // pass parameter to search method
+                    String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
 
                     try {
 
 
                         JSONObject json = new JSONObject(businessesList);           // parse string to json
                         JSONArray businesses = json.getJSONArray("businesses");     // get all restaurants based on key "businesses", return a jsonarray
+
+                        // shuffle jsonarray to create different result every search the same position
+                        Random rnd = new Random();
+                        for (int i = businesses.length() - 1; i >= 0; i--)
+                        {
+                            int j = rnd.nextInt(i + 1);
+                            // Simple swap
+                            Object object = businesses.get(j);
+                            businesses.put(j, businesses.get(i));
+                            businesses.put(i, object);
+                        }
 
                         totalResultFromYelp = (long)json.getLong("total");  // get total result
 
@@ -259,22 +291,33 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                             // add new data restaurant object to array list
                             al.add(new Data(restaurantID,restaurantName, restaurantCatergories, restaurantImage_url,restaurantRating,restaurantPhone,restaurantAddress,restaurantLatitude,restaurantLongitude));
-
+                            countRestaurant ++;
                             //Get more restaurants once we run out
                             if(i == businesses.length() - 1) {
-                                businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset+limitSearch*countGroupOffset); // send another request to yelp with different offset
-                                //businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
+                                //businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset+limitSearch*countGroupOffset); // send another request to yelp with different offset
+                                businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
                                 json = new JSONObject(businessesList);
                                 JSONArray moreBusinesses = json.getJSONArray("businesses");
                                 businesses = moreBusinesses;
                                 countGroupOffset++;
                                 i = -1;
+
+
+                            }
+                            // kill the asyn task on background to implement espresso test
+                            if(countRestaurant == totalResultFromYelp) {
+                                //Toast.makeText(MainActivity.this, "test cancel", Toast.LENGTH_LONG).show();
+                                this.cancel(true);
                             }
                         }
+
                     }
                     catch (Exception e){
                         e.printStackTrace();
                     }
+
+                    // cancel the asy task
+                    isCancelled();
 
                     return null;
                 }
@@ -282,12 +325,10 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 @Override
                 protected void onPostExecute(String result) {
                 }
+
             }.execute();
 
             while(al.isEmpty()){}   // wait until the app get a result from yelp
-
-
-
 
             myAppAdapter = new MyAppAdapter(al, MainActivity.this);
             flingContainer.setAdapter(myAppAdapter);
@@ -301,8 +342,8 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 public void onLeftCardExit(Object dataObject) {
 
                     likeSound.start();
-
                     Data saveData = al.get(0);
+                    temp = al.get(0);
                     saveData.setStatus("Dislike");
                     al.remove(0);
                     myAppAdapter.notifyDataSetChanged();
@@ -317,6 +358,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                     dislikeSound.start();
 
                     Data saveData = al.get(0);
+                    temp = al.get(0);
                     saveData.setStatus("Like");
                     al.remove(0);
                     myAppAdapter.notifyDataSetChanged();
@@ -354,6 +396,9 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 }
             });
         }
+
+
+
     }
 
     @Override
