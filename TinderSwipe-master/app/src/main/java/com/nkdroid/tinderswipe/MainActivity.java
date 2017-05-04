@@ -3,6 +3,7 @@ package com.nkdroid.tinderswipe;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +42,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 import static com.nkdroid.tinderswipe.R.layout.item;
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     Button buttonTest;
     Button buttonTest1;
     Button btnUndo;
-    ImageButton settingButton;
+    ImageButton settingButton, directions;
 
     Data temp;
     long countRestaurant = 0;
@@ -123,7 +125,17 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 myAppAdapter.notifyDataSetChanged();
             }
         });
+        directions = (ImageButton)findViewById(R.id.directions);
 
+        directions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = MainActivity.this;
+                String uri = String.format(Locale.ENGLISH, "geo:0,0?q=" + al.get(0).getAddress(), latitude, longitude);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                context.startActivity(intent);
+            }
+        });
         buttonTest = (Button)findViewById(R.id.button5);
 
         buttonTest.setOnClickListener(new View.OnClickListener() {
@@ -302,13 +314,13 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                                 countGroupOffset++;
                                 i = -1;
 
-
-                            }
-                            // kill the asyn task on background to implement espresso test
-                            if(countRestaurant == totalResultFromYelp) {
-                                //Toast.makeText(MainActivity.this, "test cancel", Toast.LENGTH_LONG).show();
                                 this.cancel(true);
                             }
+                            // kill the asyn task on background to implement espresso test
+//                            if(countRestaurant == totalResultFromYelp) {
+//                                //Toast.makeText(MainActivity.this, "test cancel", Toast.LENGTH_LONG).show();
+//
+//                            }
                         }
 
                     }

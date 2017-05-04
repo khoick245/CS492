@@ -124,12 +124,12 @@
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable-xhdpi/abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable-xhdpi/abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/abc_popup_background_mtrl_mult.9.png",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable-xhdpi/abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable-xhdpi/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/abc_list_focused_holo.9.png",

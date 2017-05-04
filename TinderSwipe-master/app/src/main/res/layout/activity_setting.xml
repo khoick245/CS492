@@ -8,30 +8,77 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.nkdroid.tinderswipe.Setting">
+    tools:context="com.nkdroid.tinderswipe.Setting"
+    android:background="@drawable/background2">
 
-    <Button
-        android:text="Logout"
+    <TextView
+        android:text="Turn on/off sound"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/textView2"
+        android:textSize="24sp"
+        android:layout_above="@+id/SoundToggleButton"
+        android:textColor="@color/white"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="108dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginBottom="24dp"
-        android:id="@+id/logoutButton" />
+        android:layout_marginBottom="20dp" />
 
     <ToggleButton
         android:text="ToggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
+        android:id="@+id/SoundToggleButton"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_above="@+id/textView3"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:text="Logout"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="24sp"
+        android:textColor="@color/white"
         android:layout_above="@+id/logoutButton"
-        android:layout_alignRight="@+id/logoutButton"
-        android:layout_alignEnd="@+id/logoutButton"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="202dp"
-        android:id="@+id/SoundToggleButton" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:text="Go back to main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="450dp"
+        android:id="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Click Here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGoBack"
+        android:layout_below="@+id/logoutButton"
+        android:layout_alignLeft="@+id/logoutButton"
+        android:layout_alignStart="@+id/logoutButton" />
+
+    <Button
+        android:text="Click here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:id="@+id/logoutButton"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/SoundToggleButton"
+        android:layout_alignStart="@+id/SoundToggleButton" />
 
 </RelativeLayout>

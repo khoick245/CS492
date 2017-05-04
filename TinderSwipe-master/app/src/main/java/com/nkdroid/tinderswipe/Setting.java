@@ -17,6 +17,7 @@ import static android.R.id.toggle;
 public class Setting extends AppCompatActivity {
 
     Button logoutButton;
+    Button goBackButton;
     private FirebaseAuth mFirebaseAuth;
     private static Bundle bundle = new Bundle();
 
@@ -38,6 +39,7 @@ public class Setting extends AppCompatActivity {
         // Initialize FirebaseAuth
         mFirebaseAuth = FirebaseAuth.getInstance();
         logoutButton = (Button)findViewById(R.id.logoutButton);
+        goBackButton = (Button)findViewById(R.id.btnGoBack);
         soundButton = (ToggleButton)findViewById(R.id.SoundToggleButton);
 
         logoutButton.setOnClickListener(new View.OnClickListener(){
@@ -48,6 +50,14 @@ public class Setting extends AppCompatActivity {
                 logInIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 logInIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(logInIntent);
+            }
+        } );
+
+        goBackButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                finish();
+                Intent mainIntent = new Intent(Setting.this, MainActivity.class);
+                startActivity(mainIntent);
             }
         } );
 

@@ -100,6 +100,10 @@
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/drawable/like.png"
     },
     {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable/undo.png",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/drawable/undo.png"
+    },
+    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable/grid_color_selector.xml",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/drawable/grid_color_selector.xml"
     },
@@ -166,6 +170,10 @@
     {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable/direction.png",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/drawable/direction.png"
     },
     {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/drawable/thumbsup.png",
