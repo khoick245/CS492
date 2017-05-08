@@ -2,10 +2,12 @@ package com.nkdroid.tinderswipe;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,10 +23,18 @@ public class LocationLoading extends AppCompatActivity {
     public LocationListener locationListener;    //Used to see if our location is changing in the way we set it up
     public static LatLng latLng;
 
+    //SharedPreferences app_preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_loading);
+
+//        app_preferences = PreferenceManager.getDefaultSharedPreferences(LocationLoading.this);
+//        SharedPreferences.Editor editor = app_preferences.edit();
+//        editor.putInt("Radius", 2);
+//        editor.commit();
+
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE); //Calls the ability to retrieve our location service
 
         locationListener = new LocationListener() {

@@ -1,11 +1,15 @@
 package com.nkdroid.tinderswipe;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -39,8 +43,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
@@ -56,11 +58,12 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     private SwipeFlingAdapterView flingContainer;
 
     String term = "restaurant";         // term to search
-    double latitude = 33.783784;        // current position
-    double longitude = -118.105181;     // current position
-    //public double latitude = 0;        // current position
-    //public double longitude = 0;     // current position
-    int radius = 3000;                  // radius to search
+    //double latitude = 33.783784;        // current position
+    //double longitude = -118.105181;     // current position
+    public double latitude = 0;        // current position
+    public double longitude = 0;     // current position
+    //int radius = 3000;                  // radius to search
+    int radius;                  // radius to search
     int limitSearch = 40;               // limit the result return
     int offset = 0;                     // offset of json object return in array
     int countGroupOffset = 1;           // used to group offset base on limitSearch
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     public static MediaPlayer likeSound = null;
     public static MediaPlayer dislikeSound = null;
 
+    SharedPreferences app_preferences;
 
     Button buttonTest;
     Button buttonTest1;
@@ -94,20 +98,26 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         myAppAdapter.notifyDataSetChanged();
     }
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toast.makeText(MainActivity.this, "6", Toast.LENGTH_LONG).show();
 
-        //latitude = LocationLoading.latLng.latitude;
-        //longitude = LocationLoading.latLng.longitude;
+        app_preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        // if there is no Radius in shared reference, return default 2
+        int miles = app_preferences.getInt("Radius", 2);
+        radius = (int)(app_preferences.getInt("Radius", 2) * 1609.34);
+
+//        latitude = LocationLoading.latLng.latitude;
+//        longitude = LocationLoading.latLng.longitude;
+
+        Toast.makeText(MainActivity.this, "Searching Radius: " + miles + " miles" , Toast.LENGTH_LONG).show();
 
         settingButton = (ImageButton)findViewById(R.id.imageButton2);
         settingButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+
                 Intent settingIntend = new Intent(MainActivity.this, Setting.class);
                 startActivity(settingIntend);
             }
@@ -212,13 +222,11 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 protected String doInBackground(Void... params) {
                     Yelp yelp = Yelp.getYelp(MainActivity.this);    // create yelp object
 
-
                     // Yelp return a Json String
-                    //String businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset); // pass parameter to search method
-                    String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
+                    String businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset); // pass parameter to search method
+                    //String businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
 
                     try {
-
 
                         JSONObject json = new JSONObject(businessesList);           // parse string to json
                         JSONArray businesses = json.getJSONArray("businesses");     // get all restaurants based on key "businesses", return a jsonarray
@@ -306,15 +314,15 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                             countRestaurant ++;
                             //Get more restaurants once we run out
                             if(i == businesses.length() - 1) {
-                                //businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset+limitSearch*countGroupOffset); // send another request to yelp with different offset
-                                businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
+                                businessesList = yelp.search(term, LocationLoading.latLng.latitude,LocationLoading.latLng.longitude, radius, limitSearch, offset+limitSearch*countGroupOffset); // send another request to yelp with different offset
+                                //businessesList = yelp.search(term, latitude,longitude, radius, limitSearch, offset); // pass parameter to search method
                                 json = new JSONObject(businessesList);
                                 JSONArray moreBusinesses = json.getJSONArray("businesses");
                                 businesses = moreBusinesses;
                                 countGroupOffset++;
                                 i = -1;
 
-                                this.cancel(true);
+                                //this.cancel(true);
                             }
                             // kill the asyn task on background to implement espresso test
 //                            if(countRestaurant == totalResultFromYelp) {
@@ -329,7 +337,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                     }
 
                     // cancel the asy task
-                    isCancelled();
+                    //isCancelled();
 
                     return null;
                 }

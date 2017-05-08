@@ -33,9 +33,25 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.nkdroid.tinderswipe.LocationLoading"
+            android:label="Fooder" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nkdroid.tinderswipe.MainActivity" >
+            <intent-filter>
+                <action android:name="com.nkdroid.tinderswipe.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <!-- <activity -->
-        <!-- android:name=".LocationLoading" -->
+        <!-- android:name=".MainActivity" -->
         <!-- android:label="Fooder"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -44,25 +60,10 @@
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-        <!-- <activity android:name=".MainActivity"> -->
-        <!-- <intent-filter> -->
-        <!-- <action android:name="com.nkdroid.tinderswipe.MainActivity" /> -->
 
 
-        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
-        <!-- </intent-filter> -->
-        <!-- </activity> -->
+        <!-- <activity android:name=".LocationLoading" /> -->
 
-        <activity
-            android:name="com.nkdroid.tinderswipe.MainActivity"
-            android:label="Fooder" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="com.nkdroid.tinderswipe.LocationLoading" />
         <activity android:name="com.nkdroid.tinderswipe.SignUpActivity" />
         <activity android:name="com.nkdroid.tinderswipe.LogInActivity" />
         <activity android:name="com.nkdroid.tinderswipe.RestaurantList.DislikeRestaurantActivity" />

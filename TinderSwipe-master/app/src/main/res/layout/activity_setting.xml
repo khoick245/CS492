@@ -24,18 +24,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="20dp" />
 
-    <ToggleButton
-        android:text="ToggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
-        android:id="@+id/SoundToggleButton"
-        android:layout_marginLeft="22dp"
-        android:layout_marginStart="22dp"
-        android:layout_above="@+id/textView3"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
-
     <TextView
         android:text="Logout"
         android:textStyle="bold"
@@ -49,36 +37,60 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="24dp" />
 
-    <TextView
-        android:text="Go back to main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:textColor="@color/white"
-        android:layout_marginTop="450dp"
-        android:id="@+id/textView5"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Click Here"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnGoBack"
-        android:layout_below="@+id/logoutButton"
-        android:layout_alignLeft="@+id/logoutButton"
-        android:layout_alignStart="@+id/logoutButton" />
-
     <Button
         android:text="Click here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="31dp"
         android:id="@+id/logoutButton"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_alignLeft="@+id/SoundToggleButton"
-        android:layout_alignStart="@+id/SoundToggleButton" />
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Miles: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="45dp"
+        android:id="@+id/txtMiles"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtMiles"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:id="@+id/btnChangeRadius" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:elevation="24dp"
+        android:background="@drawable/snackbar_background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:max="10"
+        android:thumb="@android:drawable/ic_notification_overlay" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
+        android:id="@+id/SoundToggleButton"
+        android:layout_above="@+id/textView3"
+        android:layout_alignRight="@+id/seekBar"
+        android:layout_alignEnd="@+id/seekBar" />
+
 
 </RelativeLayout>
