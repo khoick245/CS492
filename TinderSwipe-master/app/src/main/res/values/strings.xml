@@ -25,4 +25,5 @@
     <string name="action_logout">Logout</string>
     <string name="title_activity_dislike_main">DislikeMainActivity</string>
     <string name="title_activity_dislike_restaurant">DislikeRestaurant</string>
+    <string name="search_hint"></string>
 </resources>

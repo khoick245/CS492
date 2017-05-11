@@ -1,5 +1,6 @@
 package com.nkdroid.tinderswipe;
 
+import android.app.SearchManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +11,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -25,6 +27,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.SearchView;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
@@ -102,6 +106,9 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar mytoolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mytoolbar);
 
         app_preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -510,7 +517,59 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        final MenuItem searchItem = menu.findItem(R.id.search);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        searchView.setSubmitButtonEnabled(false);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+
+        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+            }
+        });
+
+        searchView.setOnQueryTextListener( new SearchView.OnQueryTextListener() {
+            @Override
+
+            public boolean onQueryTextSubmit(String searchQuery) {
+                // myAppAdapter.getFilter().filter(searchQuery.toString().trim());
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String searchQuery) {
+
+                View view = flingContainer.getSelectedView();
+                view.findViewById(R.id.background).setAlpha(0);
+
+                if(!searchQuery.isEmpty())  // do searching
+                {
+                    Toast.makeText(MainActivity.this, "The searching result will be displayed in next swipe", Toast.LENGTH_LONG).show();
+                    doSearching(searchQuery);
+                }
+
+                return true;
+            }
+        });
+
+
         return true;
+    }
+
+    public void doSearching(String searchQuery){
+        for (int j =0; j<al.size();j++) {
+            if(al.get(j).getCategories().toLowerCase().contains(searchQuery.toLowerCase())){
+                Data restaurant = al.get(j);
+                al.remove(j);
+                al.add(0, restaurant);
+                myAppAdapter.notifyDataSetChanged();
+            }
+        };
+
     }
 
     @Override
@@ -526,6 +585,15 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
             loadLogInView();
         }
 
+        if (id == R.id.search){
+            return true;
+        }
+
+        if (id == R.id.action_settings){
+            Intent settingIntend = new Intent(MainActivity.this, Setting.class);
+            startActivity(settingIntend);
+        }
+        
         return super.onOptionsItemSelected(item);
     }
 
