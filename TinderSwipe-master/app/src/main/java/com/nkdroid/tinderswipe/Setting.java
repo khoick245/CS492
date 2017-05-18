@@ -71,7 +71,9 @@ public class Setting extends AppCompatActivity {
                 PendingIntent mPendingIntent = PendingIntent.getActivity(Setting.this,mPendingIntentId, mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
                 AlarmManager mgr = (AlarmManager)Setting.this.getSystemService(Context.ALARM_SERVICE);
                 mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
-                android.os.Process.killProcess(android.os.Process.myPid());
+                //android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(0);
+
             }
         } );
 
@@ -81,7 +83,10 @@ public class Setting extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
                 defaultMiles = radiusSeekBar.getProgress();
                 milesTextView.setText("Miles: " + radiusSeekBar.getProgress());
-
+                if(radiusSeekBar.getProgress() == 0)
+                    changeRadiusButton.setEnabled(false);
+                else
+                    changeRadiusButton.setEnabled(true);
             }
 
             @Override
@@ -91,6 +96,7 @@ public class Setting extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 milesTextView.setText("Miles: " + radiusSeekBar.getProgress());
+
             }
         });
 

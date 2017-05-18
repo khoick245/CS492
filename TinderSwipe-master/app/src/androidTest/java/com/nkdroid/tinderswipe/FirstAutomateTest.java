@@ -38,7 +38,7 @@ public class FirstAutomateTest {
 
     @Test
     public void logOutTest() {
-        onView(withId(R.id.imageButton2)).perform(click());
+        //onView(withId(R.id.imageButton2)).perform(click());
         onView(withId(R.id.logoutButton)).perform(click());
         try {
             Thread.sleep(3000);

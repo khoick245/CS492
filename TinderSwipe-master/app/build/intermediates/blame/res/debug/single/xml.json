@@ -2,5 +2,13 @@
     {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/xml/searchable.xml",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/xml/searchable.xml"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/res/merged/debug/xml/searchable.xml",
+        "source": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/src/main/res/xml/searchable.xml"
+    },
+    {
+        "merged": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/res/merged/debug/xml/searchable.xml",
+        "source": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/src/main/res/xml/searchable.xml"
     }
 ]

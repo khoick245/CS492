@@ -1,16 +1,19 @@
 package com.nkdroid.tinderswipe;
 
+import android.app.MediaRouteButton;
 import android.app.SearchManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -90,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     Button buttonTest;
     Button buttonTest1;
     Button btnUndo;
-    ImageButton settingButton, directions;
+    ImageButton settingButton, directions, optionsMenu;
 
     Data temp;
     long countRestaurant = 0;
@@ -106,9 +109,11 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar mytoolbar = (Toolbar) findViewById(R.id.toolbar);
+        mytoolbar.setLogo(R.drawable.avo3);
         setSupportActionBar(mytoolbar);
+        getSupportActionBar().setTitle("");
+
 
         app_preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -121,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
         Toast.makeText(MainActivity.this, "Searching Radius: " + miles + " miles" , Toast.LENGTH_LONG).show();
 
-        settingButton = (ImageButton)findViewById(R.id.imageButton2);
+       /* settingButton = (ImageButton)findViewById(R.id.imageButton2);
         settingButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -129,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 startActivity(settingIntend);
             }
         });
-
+*/
         likeSound = MediaPlayer.create(this, R.raw.like);
         dislikeSound = MediaPlayer.create(this, R.raw.dislike);
 
@@ -144,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         });
         directions = (ImageButton)findViewById(R.id.directions);
 
-        directions.setOnClickListener(new View.OnClickListener() {
+       directions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = MainActivity.this;
@@ -153,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 context.startActivity(intent);
             }
         });
+        /*
         buttonTest = (Button)findViewById(R.id.button5);
 
         buttonTest.setOnClickListener(new View.OnClickListener() {
@@ -162,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 startActivity(dislikeIntend);
             }
         });
-
+*/
         buttonTest1 = (Button)findViewById(R.id.button3);
 
         buttonTest1.setOnClickListener(new View.OnClickListener() {
@@ -522,8 +528,21 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         final MenuItem searchItem = menu.findItem(R.id.search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setSubmitButtonEnabled(false);
+
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
+        MenuItemCompat.setOnActionExpandListener(menu.findItem(R.id.search), new MenuItemCompat.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+
+                return true;
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                return true;
+            }
+        });
 
         searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -535,8 +554,8 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
             @Override
 
             public boolean onQueryTextSubmit(String searchQuery) {
-                // myAppAdapter.getFilter().filter(searchQuery.toString().trim());
 
+                Toast.makeText(MainActivity.this, "Search results will display in the next swipe", Toast.LENGTH_LONG).show();
                 return false;
             }
 
@@ -548,7 +567,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
                 if(!searchQuery.isEmpty())  // do searching
                 {
-                    Toast.makeText(MainActivity.this, "The searching result will be displayed in next swipe", Toast.LENGTH_LONG).show();
+
                     doSearching(searchQuery);
                 }
 
@@ -593,7 +612,13 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
             Intent settingIntend = new Intent(MainActivity.this, Setting.class);
             startActivity(settingIntend);
         }
-        
+        if (id == R.id.action_dislike){
+
+            Intent settingIntend = new Intent(MainActivity.this, DislikeRestaurantActivity.class);
+            startActivity(settingIntend);
+                }
+
+
         return super.onOptionsItemSelected(item);
     }
 

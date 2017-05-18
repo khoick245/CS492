@@ -57,7 +57,7 @@
         android:layout_height="70dp"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        android:background="@drawable/delete"
+        android:background="@drawable/trashcan"
         android:id="@+id/imageButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

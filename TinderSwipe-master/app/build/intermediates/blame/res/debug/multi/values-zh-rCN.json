@@ -1,5 +1,1269 @@
 [
     {
+        "outputFile": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 95,
+                    "endOffset": 196
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 295,
+                        "endColumn": 95,
+                        "endOffset": 386
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 201,
+                    "endColumn": 94,
+                    "endOffset": 291
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 391,
+                        "endColumn": 94,
+                        "endOffset": 481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 296,
+                    "endColumn": 99,
+                    "endOffset": 391
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 486,
+                        "endColumn": 99,
+                        "endOffset": 581
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 396,
+                    "endColumn": 81,
+                    "endOffset": 473
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 586,
+                        "endColumn": 81,
+                        "endOffset": 663
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 478,
+                    "endColumn": 96,
+                    "endOffset": 570
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 668,
+                        "endColumn": 96,
+                        "endOffset": 760
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 575,
+                    "endColumn": 105,
+                    "endOffset": 676
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 765,
+                        "endColumn": 105,
+                        "endOffset": 866
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 681,
+                    "endColumn": 95,
+                    "endOffset": 772
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 871,
+                        "endColumn": 95,
+                        "endOffset": 962
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 777,
+                    "endColumn": 95,
+                    "endOffset": 868
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 967,
+                        "endColumn": 95,
+                        "endOffset": 1058
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 873,
+                    "endColumn": 94,
+                    "endOffset": 963
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1063,
+                        "endColumn": 94,
+                        "endOffset": 1153
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 968,
+                    "endColumn": 96,
+                    "endOffset": 1060
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1158,
+                        "endColumn": 96,
+                        "endOffset": 1250
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1065,
+                    "endColumn": 94,
+                    "endOffset": 1155
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1255,
+                        "endColumn": 94,
+                        "endOffset": 1345
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1160,
+                    "endColumn": 97,
+                    "endOffset": 1253
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1350,
+                        "endColumn": 97,
+                        "endOffset": 1443
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1258,
+                    "endColumn": 111,
+                    "endOffset": 1365
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1448,
+                        "endColumn": 111,
+                        "endOffset": 1555
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1370,
+                    "endColumn": 102,
+                    "endOffset": 1468
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 344,
+                        "endColumn": 102,
+                        "endOffset": 442
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1473,
+                    "endColumn": 160,
+                    "endOffset": 1629
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 447,
+                        "endColumn": 160,
+                        "endOffset": 603
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1634,
+                    "endColumn": 116,
+                    "endOffset": 1746
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 608,
+                        "endColumn": 116,
+                        "endOffset": 720
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1751,
+                    "endColumn": 103,
+                    "endOffset": 1850
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 725,
+                        "endColumn": 103,
+                        "endOffset": 824
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1855,
+                    "endColumn": 169,
+                    "endOffset": 2020
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 829,
+                        "endColumn": 169,
+                        "endOffset": 994
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2025,
+                    "endColumn": 172,
+                    "endOffset": 2193
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 999,
+                        "endColumn": 172,
+                        "endOffset": 1167
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2198,
+                    "endColumn": 117,
+                    "endOffset": 2311
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1172,
+                        "endColumn": 117,
+                        "endOffset": 1285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2316,
+                    "endColumn": 120,
+                    "endOffset": 2432
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1290,
+                        "endColumn": 120,
+                        "endOffset": 1406
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2437,
+                    "endColumn": 175,
+                    "endOffset": 2608
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 347,
+                        "endColumn": 175,
+                        "endOffset": 518
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2613,
+                    "endColumn": 189,
+                    "endOffset": 2798
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1411,
+                        "endColumn": 189,
+                        "endOffset": 1596
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2803,
+                    "endColumn": 116,
+                    "endOffset": 2915
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1601,
+                        "endColumn": 116,
+                        "endOffset": 1713
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2920,
+                    "endColumn": 102,
+                    "endOffset": 3018
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1718,
+                        "endColumn": 102,
+                        "endOffset": 1816
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 3023,
+                    "endColumn": 160,
+                    "endOffset": 3179
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1821,
+                        "endColumn": 160,
+                        "endOffset": 1977
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 3184,
+                    "endColumn": 116,
+                    "endOffset": 3296
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1982,
+                        "endColumn": 116,
+                        "endOffset": 2094
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 3301,
+                    "endColumn": 162,
+                    "endOffset": 3459
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 2099,
+                        "endColumn": 162,
+                        "endOffset": 2257
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 3464,
+                    "endColumn": 119,
+                    "endOffset": 3579
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 2262,
+                        "endColumn": 119,
+                        "endOffset": 2377
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3584,
+                    "endColumn": 137,
+                    "endOffset": 3717
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 2382,
+                        "endColumn": 137,
+                        "endOffset": 2515
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3722,
+                    "endColumn": 85,
+                    "endOffset": 3803
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2520,
+                        "endColumn": 85,
+                        "endOffset": 2601
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3808,
+                    "endColumn": 86,
+                    "endOffset": 3890
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2606,
+                        "endColumn": 86,
+                        "endOffset": 2688
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 3895,
+                    "endColumn": 102,
+                    "endOffset": 3993
+                },
+                "from": {
+                    "file": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2693,
+                        "endColumn": 102,
+                        "endOffset": 2791
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 95,
+                    "endOffset": 196
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 295,
+                        "endColumn": 95,
+                        "endOffset": 386
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 201,
+                    "endColumn": 94,
+                    "endOffset": 291
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 391,
+                        "endColumn": 94,
+                        "endOffset": 481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 296,
+                    "endColumn": 99,
+                    "endOffset": 391
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 486,
+                        "endColumn": 99,
+                        "endOffset": 581
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 396,
+                    "endColumn": 81,
+                    "endOffset": 473
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 586,
+                        "endColumn": 81,
+                        "endOffset": 663
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 478,
+                    "endColumn": 96,
+                    "endOffset": 570
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 668,
+                        "endColumn": 96,
+                        "endOffset": 760
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 575,
+                    "endColumn": 105,
+                    "endOffset": 676
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 765,
+                        "endColumn": 105,
+                        "endOffset": 866
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 681,
+                    "endColumn": 95,
+                    "endOffset": 772
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 871,
+                        "endColumn": 95,
+                        "endOffset": 962
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 777,
+                    "endColumn": 95,
+                    "endOffset": 868
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 967,
+                        "endColumn": 95,
+                        "endOffset": 1058
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 873,
+                    "endColumn": 94,
+                    "endOffset": 963
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1063,
+                        "endColumn": 94,
+                        "endOffset": 1153
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 968,
+                    "endColumn": 96,
+                    "endOffset": 1060
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1158,
+                        "endColumn": 96,
+                        "endOffset": 1250
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1065,
+                    "endColumn": 94,
+                    "endOffset": 1155
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1255,
+                        "endColumn": 94,
+                        "endOffset": 1345
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1160,
+                    "endColumn": 97,
+                    "endOffset": 1253
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1350,
+                        "endColumn": 97,
+                        "endOffset": 1443
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1258,
+                    "endColumn": 111,
+                    "endOffset": 1365
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-zh-rCN/values-zh-rCN.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1448,
+                        "endColumn": 111,
+                        "endOffset": 1555
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1370,
+                    "endColumn": 102,
+                    "endOffset": 1468
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 344,
+                        "endColumn": 102,
+                        "endOffset": 442
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1473,
+                    "endColumn": 160,
+                    "endOffset": 1629
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 447,
+                        "endColumn": 160,
+                        "endOffset": 603
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1634,
+                    "endColumn": 116,
+                    "endOffset": 1746
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 608,
+                        "endColumn": 116,
+                        "endOffset": 720
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1751,
+                    "endColumn": 103,
+                    "endOffset": 1850
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 725,
+                        "endColumn": 103,
+                        "endOffset": 824
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1855,
+                    "endColumn": 169,
+                    "endOffset": 2020
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 829,
+                        "endColumn": 169,
+                        "endOffset": 994
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2025,
+                    "endColumn": 172,
+                    "endOffset": 2193
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 999,
+                        "endColumn": 172,
+                        "endOffset": 1167
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2198,
+                    "endColumn": 117,
+                    "endOffset": 2311
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1172,
+                        "endColumn": 117,
+                        "endOffset": 1285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2316,
+                    "endColumn": 120,
+                    "endOffset": 2432
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1290,
+                        "endColumn": 120,
+                        "endOffset": 1406
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2437,
+                    "endColumn": 175,
+                    "endOffset": 2608
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 347,
+                        "endColumn": 175,
+                        "endOffset": 518
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2613,
+                    "endColumn": 189,
+                    "endOffset": 2798
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1411,
+                        "endColumn": 189,
+                        "endOffset": 1596
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2803,
+                    "endColumn": 116,
+                    "endOffset": 2915
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1601,
+                        "endColumn": 116,
+                        "endOffset": 1713
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2920,
+                    "endColumn": 102,
+                    "endOffset": 3018
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1718,
+                        "endColumn": 102,
+                        "endOffset": 1816
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 3023,
+                    "endColumn": 160,
+                    "endOffset": 3179
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1821,
+                        "endColumn": 160,
+                        "endOffset": 1977
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 3184,
+                    "endColumn": 116,
+                    "endOffset": 3296
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1982,
+                        "endColumn": 116,
+                        "endOffset": 2094
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 3301,
+                    "endColumn": 162,
+                    "endOffset": 3459
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 2099,
+                        "endColumn": 162,
+                        "endOffset": 2257
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 3464,
+                    "endColumn": 119,
+                    "endOffset": 3579
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 2262,
+                        "endColumn": 119,
+                        "endOffset": 2377
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3584,
+                    "endColumn": 137,
+                    "endOffset": 3717
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 2382,
+                        "endColumn": 137,
+                        "endOffset": 2515
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3722,
+                    "endColumn": 85,
+                    "endOffset": 3803
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2520,
+                        "endColumn": 85,
+                        "endOffset": 2601
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3808,
+                    "endColumn": 86,
+                    "endOffset": 3890
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2606,
+                        "endColumn": 86,
+                        "endOffset": 2688
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 3895,
+                    "endColumn": 102,
+                    "endOffset": 3993
+                },
+                "from": {
+                    "file": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-zh-rCN/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2693,
+                        "endColumn": 102,
+                        "endOffset": 2791
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml",
         "map": [
             {

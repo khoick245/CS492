@@ -4,7 +4,23 @@
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/raw/like.wav"
     },
     {
+        "merged": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/res/merged/debug/raw/like.wav",
+        "source": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/src/main/res/raw/like.wav"
+    },
+    {
+        "merged": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/res/merged/debug/raw/dislike.wav",
+        "source": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/src/main/res/raw/dislike.wav"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/res/merged/debug/raw/dislike.wav",
+        "source": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/src/main/res/raw/dislike.wav"
+    },
+    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/raw/dislike.wav",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/raw/dislike.wav"
+    },
+    {
+        "merged": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/res/merged/debug/raw/like.wav",
+        "source": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/src/main/res/raw/like.wav"
     }
 ]

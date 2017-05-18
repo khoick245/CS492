@@ -9,20 +9,21 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.nkdroid.tinderswipe.Setting"
-    android:background="@drawable/background2">
+    android:background="#F1F1F1">
 
     <TextView
-        android:text="Turn on/off sound"
+        android:text="Sound"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
-        android:textSize="24sp"
-        android:layout_above="@+id/SoundToggleButton"
-        android:textColor="@color/white"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="20dp" />
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="275dp"
+        android:textColor="#000000"
+        android:background="@drawable/border"
+
+        />
 
     <TextView
         android:text="Logout"
@@ -30,67 +31,102 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
-        android:textSize="24sp"
-        android:textColor="@color/white"
-        android:layout_above="@+id/logoutButton"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#000000"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/border"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="24dp" />
 
     <Button
-        android:text="Click here"
+        android:text="Sign Out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="31dp"
         android:id="@+id/logoutButton"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="434dp"
+
+        android:background="@drawable/borderbutton"
+
+        />
 
     <TextView
-        android:text="Miles: "
+        android:text="Settings"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@color/white"
-        android:layout_marginTop="45dp"
+        android:id="@+id/settingstext"
+        android:textSize="32sp"
+        android:fontFamily="cursive"
+        android:layout_marginLeft="130dp"
+        android:textColor="#000000"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="40dp"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="232dp"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="385dp"/>
+
+    <TextView
+        android:text="Search Distance:"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:id="@+id/txtMiles"
-        android:layout_below="@+id/seekBar"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3" />
+        android:layout_marginTop="70dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:text="OK"
+        android:text="Set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/txtMiles"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:id="@+id/btnChangeRadius" />
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="210dp"
+        android:background="@drawable/borderbutton"
+        android:id="@+id/btnChangeRadius"
+
+       />
 
     <SeekBar
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
         android:id="@+id/seekBar"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/borderseek"
         android:elevation="24dp"
-        android:background="@drawable/snackbar_background"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:max="10"
-        android:thumb="@android:drawable/ic_notification_overlay" />
-
+        android:thumb="@drawable/abc_btn_radio_material"
+        android:layout_below="@+id/txtMiles"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <ToggleButton
         android:text="ToggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
         android:id="@+id/SoundToggleButton"
-        android:layout_above="@+id/textView3"
-        android:layout_alignRight="@+id/seekBar"
-        android:layout_alignEnd="@+id/seekBar" />
+
+        android:background="@drawable/borderbutton"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/logoutButton"
+        android:layout_alignStart="@+id/logoutButton" />
 
 
 </RelativeLayout>

@@ -1,6 +1,26 @@
 [
     {
+        "merged": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/fooderlogo.png",
+        "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/mipmap-xxxhdpi/fooderlogo.png"
+    },
+    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/fooderlogo.png",
+        "source": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/src/main/res/mipmap-xxxhdpi/fooderlogo.png"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/fooderlogo.png",
+        "source": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/src/main/res/mipmap-xxxhdpi/fooderlogo.png"
     }
 ]

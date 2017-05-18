@@ -4,11 +4,35 @@
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/menu/menu_tinder_swipe.xml"
     },
     {
+        "merged": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/res/merged/debug/menu/menu_tinder_swipe.xml",
+        "source": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/src/main/res/menu/menu_tinder_swipe.xml"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/res/merged/debug/menu/menu_tinder_swipe.xml",
+        "source": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/src/main/res/menu/menu_tinder_swipe.xml"
+    },
+    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/menu/menu_splash.xml",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/menu/menu_splash.xml"
     },
     {
+        "merged": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/src/main/res/menu/menu_main.xml"
+    },
+    {
         "merged": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
         "source": "/Users/khoinguyen/Documents/CS492Project/TinderSwipe-master/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/build/intermediates/res/merged/debug/menu/menu_splash.xml",
+        "source": "/Users/khoinguyen/Documents/CS492ProjectNew/TinderSwipe-master/app/src/main/res/menu/menu_splash.xml"
+    },
+    {
+        "merged": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/build/intermediates/res/merged/debug/menu/menu_splash.xml",
+        "source": "/Users/frank/Downloads/CS492-master/TinderSwipe-master/app/src/main/res/menu/menu_splash.xml"
     }
 ]

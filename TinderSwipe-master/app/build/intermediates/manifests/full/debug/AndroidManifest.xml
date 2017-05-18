@@ -53,21 +53,6 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-
-        <!-- <activity -->
-        <!-- android:name=".MainActivity" -->
-        <!-- android:label="Fooder"> -->
-        <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-        <!-- </intent-filter> -->
-        <!-- </activity> -->
-
-
-        <!-- <activity android:name=".LocationLoading" /> -->
-
         <activity android:name="com.nkdroid.tinderswipe.SignUpActivity" />
         <activity android:name="com.nkdroid.tinderswipe.LogInActivity" />
         <activity android:name="com.nkdroid.tinderswipe.RestaurantList.DislikeRestaurantActivity" />
